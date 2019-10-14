@@ -16,7 +16,8 @@
 		5E0CBF3D235206CB0069B7B2 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0CBF3C235206CB0069B7B2 /* NewsListViewController.swift */; };
 		5E0CBF3F235206E50069B7B2 /* NewsTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0CBF3E235206E50069B7B2 /* NewsTextViewController.swift */; };
 		5E0CBF41235208150069B7B2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0CBF40235208150069B7B2 /* CoreDataManager.swift */; };
-		5E0CBF43235208780069B7B2 /* RSSHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0CBF42235208780069B7B2 /* RSSHandler.swift */; };
+		5E39A67A2354AA5C0067CE91 /* FeedItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E39A6782354AA5C0067CE91 /* FeedItem+CoreDataClass.swift */; };
+		5E3D1BEC2354F095001080BE /* FeedItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3D1BEA2354F095001080BE /* FeedItem+CoreDataProperties.swift */; };
 		D0CAE418094F5851EF01D974 /* Pods_NewsReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D42241FB5F9F4818B1ED889 /* Pods_NewsReader.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +35,8 @@
 		5E0CBF3C235206CB0069B7B2 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		5E0CBF3E235206E50069B7B2 /* NewsTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTextViewController.swift; sourceTree = "<group>"; };
 		5E0CBF40235208150069B7B2 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		5E0CBF42235208780069B7B2 /* RSSHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSHandler.swift; sourceTree = "<group>"; };
+		5E39A6782354AA5C0067CE91 /* FeedItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "FeedItem+CoreDataClass.swift"; path = "NewsReader/FeedItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5E3D1BEA2354F095001080BE /* FeedItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8D42241FB5F9F4818B1ED889 /* Pods_NewsReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -53,6 +55,8 @@
 		5E0CBF19235204AC0069B7B2 = {
 			isa = PBXGroup;
 			children = (
+				5E3D1BEA2354F095001080BE /* FeedItem+CoreDataProperties.swift */,
+				5E39A6782354AA5C0067CE91 /* FeedItem+CoreDataClass.swift */,
 				5E0CBF24235204AC0069B7B2 /* NewsReader */,
 				5E0CBF23235204AC0069B7B2 /* Products */,
 				8BD43D69AC0192ABBEF27E5A /* Pods */,
@@ -75,7 +79,6 @@
 				5E0CBF27235204AC0069B7B2 /* SceneDelegate.swift */,
 				5E0CBF2B235204AC0069B7B2 /* Main.storyboard */,
 				5E0CBF40235208150069B7B2 /* CoreDataManager.swift */,
-				5E0CBF42235208780069B7B2 /* RSSHandler.swift */,
 				5E0CBF3C235206CB0069B7B2 /* NewsListViewController.swift */,
 				5E0CBF3E235206E50069B7B2 /* NewsTextViewController.swift */,
 				5E0CBF31235204AE0069B7B2 /* Assets.xcassets */,
@@ -215,11 +218,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E0CBF43235208780069B7B2 /* RSSHandler.swift in Sources */,
 				5E0CBF41235208150069B7B2 /* CoreDataManager.swift in Sources */,
 				5E0CBF3F235206E50069B7B2 /* NewsTextViewController.swift in Sources */,
+				5E39A67A2354AA5C0067CE91 /* FeedItem+CoreDataClass.swift in Sources */,
 				5E0CBF3D235206CB0069B7B2 /* NewsListViewController.swift in Sources */,
 				5E0CBF26235204AC0069B7B2 /* AppDelegate.swift in Sources */,
+				5E3D1BEC2354F095001080BE /* FeedItem+CoreDataProperties.swift in Sources */,
 				5E0CBF28235204AC0069B7B2 /* SceneDelegate.swift in Sources */,
 				5E0CBF30235204AC0069B7B2 /* NewsReader.xcdatamodeld in Sources */,
 			);

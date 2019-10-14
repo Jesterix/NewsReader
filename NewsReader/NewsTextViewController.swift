@@ -7,26 +7,46 @@
 //
 
 import UIKit
+import WebKit
 
-protocol TextPresenter {
-    var textToShow: String { get set }
+protocol ContentPresenter {
+    var contentItemToShow: FeedItem? { get set }
 }
 
-class NewsTextViewController: UIViewController, TextPresenter {
+final class NewsTextViewController: UIViewController, ContentPresenter {
 
-    var textToShow: String = ""
+    var contentItemToShow: FeedItem? {
+        didSet {
+                configureView()
+        }
+    }
     
-    @IBOutlet weak var newsTextView: UITextView!
+    @IBOutlet weak var webView: WKWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        newsTextView.text = textToShow
+        configureView()
     }
     
-
-
-
+    func configureView() {
+        // Update the user interface for the detail item.
+        guard webView != nil, let contentItem = contentItemToShow, let link = contentItem.link, let url = URL(string: link) else { return }
+        
+        if let data = contentItem.data {
+            webView.load(data, mimeType: "", characterEncodingName: "", baseURL: url)
+        } else {
+            do {
+                let newData = try Data(contentsOf: url)
+                contentItem.data = newData
+                CoreDataManager.instance.saveContext()
+                
+                DispatchQueue.main.async {
+                    self.webView.load(newData, mimeType: "", characterEncodingName: "", baseURL: url)
+                }
+                
+            } catch {
+                print("error in data")
+            }
+        }
+    }
 }
-
-
